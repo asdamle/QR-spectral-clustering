@@ -21,7 +21,8 @@ rhosum = cumsum(rho);
 I = unique(I);
 
 
-[Q, ~, idx] = qr(U(I,:)',0);
+[~, ~, idx] = qr(U(I,:)',0);
 idx = idx(1:k);
 piv = I(idx);
-U = U*Q;
+[Ut, ~, Vt] = svd(U(piv,:)',0);
+U = U*(Ut*Vt');

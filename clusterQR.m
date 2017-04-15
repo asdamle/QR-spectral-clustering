@@ -9,6 +9,7 @@ function [U, piv] = clusterQR(U)
 % piv encodes which columns of UU^T were picked by the QRCP
 
 k = size(U,2);
-[Q, ~, piv] = qr(U',0);
+[~, ~, piv] = qr(U',0);
 piv = piv(1:k);
-U = U*Q;
+[Ut, ~, Vt] = svd(U(piv,:)',0);
+U = U*(Ut*Vt');
