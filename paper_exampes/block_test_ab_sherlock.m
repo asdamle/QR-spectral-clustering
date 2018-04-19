@@ -41,7 +41,7 @@ for t = 1:trials
                 q = b*log(m)/m;
             end
            
-            % cheat when this does not make sense (just for testing faster)
+            % only when this makes sense (just for testing faster)
             if p > q
                 valid = 0;
                 while ~valid

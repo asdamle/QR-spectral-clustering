@@ -36,7 +36,7 @@ for t = 1:trials
             p = a*log(m(1))/m(1);
             q = b*log(m(1))/m(1);
            
-            % cheat when this does not make sense (just for testing faster)
+            % only when this makes sense (just for testing faster)
             if p > q
                 valid = 0;
                 while ~valid
