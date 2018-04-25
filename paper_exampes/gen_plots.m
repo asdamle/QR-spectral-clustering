@@ -2,7 +2,7 @@
 
 % load the first file for Figure 2 and 3 and the second file for Figure 4
 % load 9_block_test_sherlock.mat
-load 7_block_test_unequal.mat
+% load 7_block_test_unequal.mat
 
 a_range = a_grid(:,1)';
 b_range = b_grid(1,:);
@@ -54,14 +54,14 @@ if ~isempty(corrected_theory)
 end
 fname = [num2str(k) '_block_QRkmeans.pdf'];
 % save2pdf(fname,gcf,600);
-%%
+%% not used for unequally sized blocks
 block_pplot(a_grid,b_grid,comp_true,theory_line,'Cut metric better than truth')
 if ~isempty(corrected_theory)
     plot3(a_range,corrected_theory,1.1*ones(1,Na),'--b','LineWidth',3)
 end
 fname = [num2str(k) '_block_comp_true.pdf'];
 % save2pdf(fname,gcf,600);
-%%
+%% not used for unequally sized blocks
 block_pplot(a_grid,b_grid,MLE,theory_line,'MLE better than truth')
 if ~isempty(corrected_theory)
     plot3(a_range,corrected_theory,1.1*ones(1,Na),'--b','LineWidth',3)

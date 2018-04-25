@@ -47,7 +47,7 @@ for t = 1:trials
                 while ~valid
                     A = tril(rand(n) < q);
                     truth = [];
-                    for j = 1:k;
+                    for j = 1:k
                         idx = (j-1)*m+1:j*m;
                         A(idx,idx) = tril(rand(m) < p);
                         truth = [truth j*ones(1,m)];
