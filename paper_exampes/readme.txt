@@ -17,4 +17,18 @@ Figures 2, 3, and 4:
 
 Table 1
     - The data for Table 1 is stored in RealData_cluster.mat and can be generated   
-      via real_data.m, which also outputs the entries of the table.
+      via real_data.m, which also outputs the entries of the table. Note that the
+      values in the paper are recreatable by MATLAB 2015b, newer versions will
+      generate quantitatively, though not qualitatively, different results due to   
+      changes in built in functions (this only changes the numbers for k-means, not
+      our algorith). For example, the table is recreated below for MATLAB 2017b:
+
+                                k-means objective         multi-way cut (3.1)
+      k-means++ mean                1.48                      8.78
+      k-means++ median              1.47                      10.44
+      k-means++ min                 0.76                      1.86
+      k-means++ max                 3.18                      42.03
+      Algorithm 1                   2.52                      1.92
+      k-means seeded with Alg1      0.76                      1.86
+
+      
